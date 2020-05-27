@@ -36,6 +36,7 @@ public class ControllerTest {
     public String hello(){
         return "课程名称：" + className + "  " + "班级人数：" + count + "\n" + "热部署";
     }
+
     @RequestMapping("/tea")
     @ResponseBody//响应体：设置为json格式数据
     public String teacher(){

@@ -18,9 +18,10 @@ lingnan:
   teacher: {name: ddd, age : 18, skills: [java, c, c++]}
 
 mybatis:
- mapper-locations: classpath:mapper/*.xml
+ mapper-locations: classpath:mapper/*.xml #指定xml配置文件位置
   #开启驼峰式命名
  configuration:
    map-underscore-to-camel-case: true
+
 
 

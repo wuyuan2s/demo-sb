@@ -20,6 +20,19 @@ public class AdminServiceImpl implements AdminService {
     private AdminDao adminDao;
 
     /**
+     * 通过账号密码登录
+     *
+     * @param account 账号
+     * @param password 密码
+     * @return 实例对像
+     */
+    @Override
+    public Admin login(String account, String password) {
+
+        return this.adminDao.login(account, password);
+    }
+
+    /**
      * 通过ID查询单条数据
      *
      * @param id 主键

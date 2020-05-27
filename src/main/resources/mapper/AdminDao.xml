@@ -12,6 +12,23 @@
         <result property="isAllow" column="is_allow" jdbcType="INTEGER"/>
     </resultMap>
 
+    <!-- 登录 -->
+    <select id="login" resultMap="AdminMap">
+        select
+        id, account, password, mobile, reg_date, last_login_date, is_allow
+        from stu.admin
+        <where>
+            <if test="account != null and account != ''">
+                and account = #{account}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+                and is_allow = 1
+        </where>
+        limit 1;
+    </select>
+
     <!--查询单个-->
     <select id="queryById" resultMap="AdminMap">
         select
