@@ -44,7 +44,7 @@ public class AdminController {
     }
 
     /**
-     * 前往登录
+     * 前往登录页面
      *
      * @return 登录页面
      */
@@ -74,15 +74,34 @@ public class AdminController {
         return  "index";
     }
 
+    /**
+     * 前往主页面
+     *
+     * @return 主页面
+     */
     @RequestMapping("toIndex")
     public String toIndex() {
         return "index";
     }
 
-
+    /**
+     * 插入
+     *
+     * @return json格式数据
+     */
     @PostMapping("insert")
     @ResponseBody
     public Admin insert(Admin admin){
         return adminService.insert(admin);
+    }
+
+    /**
+     * 前往欢迎页面（在主页中）
+     *
+     * @return 欢迎页面
+     */
+    @RequestMapping("toWelcome")
+    public String toWelcome(){
+        return "welcome";
     }
 }
