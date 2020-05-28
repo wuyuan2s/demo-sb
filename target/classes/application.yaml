@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: demo #在springcloud中很重要
+
+  server:
+    port: 8888 #配置tomcat端口号
+
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/stu
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+lingnan:
+  className: SpringBoot实训
+  count: 55
+  teacher: {name: ddd, age : 18, skills: [java, c, c++]}
+
+mybatis:
+ mapper-locations: classpath:mapper/*.xml #指定xml配置文件位置
+  #开启驼峰式命名
+ configuration:
+   map-underscore-to-camel-case: true
+
+
+
